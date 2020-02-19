@@ -2,7 +2,7 @@
 ENU/ NED coordinate system for tello 
 Usage Example
 ```
-from easytello import tello \n
+from easytello import tello
 from telloCoordinateSystem import telloC
 tello = tello.Tello()#initialize tello
 
