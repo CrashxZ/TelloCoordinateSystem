@@ -33,16 +33,31 @@ class telloC:
 
 
 	def move(self,x,y,z):
-		ENU = 1
 		x=int(x*100)
 		y=int(y*100)
 		z=int(z*100)
-		if(ENU==0):
+		#Position Calculation
+		self.home_x = int(self.home_x + x)
+		self.home_y = int(self.home_y + y)
+		self.home_z = int(self.home_z + z)
+
+		if(self.ENU==0):
 			self.moveNED(x,y,z)
 		else: 
 			self.moveENU(x,y,z)
 
+
+	def goHome(self):
+		if(self.ENU==0):
+			self.moveNED(self.home_x*-1,self.home_y*-1,self.home_z*-1)
+		else: 
+			self.moveENU(self.home_x*-1,self.home_y*-1,self.home_z*-1)
+
 	def __init__(self, driver):
-        	self.tello = driver
+		self.tello = driver
+		self.ENU = 1
 		# Unit = Meters
 		# Delta Trajectory
+		self.home_x = 0
+		self.home_y = 0
+		self.home_z = 0
