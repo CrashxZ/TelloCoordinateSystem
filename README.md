@@ -13,5 +13,6 @@ telloS.move(0,0,-0.5)
 tello.land()
 
 
-#Syntax : telloS.move(x,y,z)
-# note these are delta coordinates, ie or the change in coordinates.
+
+# Syntax : telloS.move(x,y,z)
+# Note these are delta coordinates, i.e. the change in coordinates.
