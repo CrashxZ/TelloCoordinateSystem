@@ -20,10 +20,14 @@ def transformCoordinates(temp):
     x = 0
     y = 0
     if data:
-        data = ast.literal_eval(data)
+        #print(data)
+        try:
+            data = ast.literal_eval(data)
+        except:
+            return 0,0
         x = data[0] - 0.5
         y = data[0] - 0.5
-    return x * 4, y * 4
+    return x * 2, y * 2
 
 
 def flyTello(x, y, z, flag, t):
