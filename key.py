@@ -25,8 +25,8 @@ while (1):
     # Set range for Tracker color and
     # define mask 
     # tracker
-    tracker_lower = np.array([17, 182, 100], np.uint8)
-    tracker_upper = np.array([100, 255, 255], np.uint8)
+    tracker_lower = np.array([18, 63, 201], np.uint8)
+    tracker_upper = np.array([37, 255, 255], np.uint8)
     tracker_mask = cv2.inRange(hsvFrame, tracker_lower, tracker_upper)
 
     # Morphological Transform, Dilation 
